@@ -1,0 +1,112 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 33% 98%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 260 70% 75%;
+    --primary-foreground: 355.7 100% 97.3%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46.9%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 6% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 252 71% 83%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 260 43% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 260 70% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 30% 15%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 260 30% 20%;
+    --sidebar-ring: 252 71% 83%;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 260 70% 75%;
+    --primary-foreground: 355.7 100% 97.3%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 252 71% 83%;
+    
+    --sidebar-background: 260 43% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 260 70% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 30% 15%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 260 30% 20%;
+    --sidebar-ring: 252 71% 83%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+.kanban-column {
+  @apply min-h-[500px] w-full bg-secondary/50 rounded-lg p-4;
+}
+
+.task-card {
+  @apply bg-white dark:bg-card shadow-sm border p-4 rounded-lg mb-3 cursor-pointer hover:shadow-md transition-shadow;
+}
+
+.epic-card {
+  @apply bg-white dark:bg-card shadow-sm border-l-4 border-devops-purple p-4 rounded-lg mb-4;
+}
+
+.feature-card {
+  @apply bg-white dark:bg-card shadow-sm border-l-4 border-devops-yellow p-4 rounded-lg mb-3;
+}
